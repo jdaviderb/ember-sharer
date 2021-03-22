@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "https://github.com/ellisonleao/sharer.js",
+  "repository": "https://github.com/jdaviderb/ember-sharer",
   "license": "MIT",
   "author": "jdaviderb",
   "directories": {
