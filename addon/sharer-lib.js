@@ -9,7 +9,7 @@
  *
  */
 
- var Sharer = function (elem) {
+var Sharer = function (elem) {
   this.elem = elem;
 };
 
@@ -72,7 +72,7 @@ Sharer.prototype = {
           params: {
             u: this.getValue('url'),
             hashtag: this.getValue('hashtag'),
-            quote: this.getValue('quote')
+            quote: this.getValue('quote'),
           },
         },
         linkedin: {
@@ -100,14 +100,20 @@ Sharer.prototype = {
           isLink: true,
         },
         whatsapp: {
-          shareUrl: this.getValue('web') !== null ? 'https://api.whatsapp.com/send' : 'https://wa.me/',
+          shareUrl:
+            this.getValue('web') !== null
+              ? 'https://api.whatsapp.com/send'
+              : 'https://wa.me/',
           params: {
             text: this.getValue('title') + ' ' + this.getValue('url'),
           },
           isLink: true,
         },
         telegram: {
-          shareUrl: this.getValue('web') !== null ? 'https://telegram.me/share' : 'tg://msg_url',
+          shareUrl:
+            this.getValue('web') !== null
+              ? 'https://telegram.me/share'
+              : 'tg://msg_url',
           params: {
             text: this.getValue('title'),
             url: this.getValue('url'),
@@ -123,7 +129,10 @@ Sharer.prototype = {
         },
         line: {
           shareUrl:
-            'http://line.me/R/msg/text/?' + encodeURIComponent(this.getValue('title') + ' ' + this.getValue('url')),
+            'http://line.me/R/msg/text/?' +
+            encodeURIComponent(
+              this.getValue('title') + ' ' + this.getValue('url')
+            ),
           isLink: true,
         },
         pinterest: {
@@ -371,7 +380,8 @@ Sharer.prototype = {
           },
         },
         qzone: {
-          shareUrl: 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey',
+          shareUrl:
+            'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey',
           params: {
             url: this.getValue('url'),
           },
@@ -476,7 +486,15 @@ Sharer.prototype = {
         popHeight = sharer.height || 480,
         left = window.innerWidth / 2 - popWidth / 2 + window.screenX,
         top = window.innerHeight / 2 - popHeight / 2 + window.screenY,
-        popParams = 'scrollbars=no, width=' + popWidth + ', height=' + popHeight + ', top=' + top + ', left=' + left,
+        popParams =
+          'scrollbars=no, width=' +
+          popWidth +
+          ', height=' +
+          popHeight +
+          ', top=' +
+          top +
+          ', left=' +
+          left,
         newWindow = window.open(sharer.shareUrl, '', popParams);
 
       if (window.focus) {
@@ -487,6 +505,5 @@ Sharer.prototype = {
     }
   },
 };
-
 
 export default Sharer;

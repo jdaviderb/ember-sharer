@@ -1,13 +1,13 @@
 {
   "name": "ember-sharer",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "Create your own social share buttons (sharer.js wrapper)",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/ellisonleao/sharer.js",
   "license": "MIT",
-  "author": "",
+  "author": "jdaviderb",
   "directories": {
     "doc": "doc",
     "test": "tests"
