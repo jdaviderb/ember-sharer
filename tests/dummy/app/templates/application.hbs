@@ -3,11 +3,13 @@
 <h2 id="title">Welcome to Ember</h2>
 
 {{outlet}}
-<SharerButton
+
+<div
   data-sharer="facebook" 
   data-hashtag="ok"
-  data-quote="hello world"
+  data-quote="hello world using modifier"
   data-url="https://emberobserver.com/"
+  {{sharer-init}}
 >
-  hello
-</SharerButton>
+  Hello2
+</div>

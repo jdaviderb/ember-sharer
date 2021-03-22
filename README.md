@@ -23,7 +23,7 @@ ember install ember-sharer
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+
 
 
 Contributing
